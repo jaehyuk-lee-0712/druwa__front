@@ -104,7 +104,7 @@ const Home = () => {
             <Link to="/">가장 많이 찾은 메뉴</Link>
           </div>
           <div className="sales">
-            <Link to="/">근처 여행지</Link>
+            <Link to="/">근처 유명지</Link>
           </div>
           <div className="faq">
             <Link to="/">자주하는 질문</Link>
