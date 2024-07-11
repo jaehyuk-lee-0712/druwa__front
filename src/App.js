@@ -12,6 +12,7 @@ import List from "./pages/List";
 import Board from "./pages/Board";
 import Test from "./pages/Test";
 import MyPage from "./pages/MyPage";
+import Map from "./pages/Map";
 
 function App() {
   return (
@@ -21,13 +22,14 @@ function App() {
         <Layout>
           <Main>
             <Routes>
-              <Route path="/" element={<Test />} />
+              <Route path="/*" element={<Test />} />
               <Route path="/home" element={<Home />} />
               <Route path="/admin" element={<Admin />} />
               <Route path="/login" element={<Login />} />
               <Route path="/list" element={<List />} />
               <Route path="/board" element={<Board />} />
               <Route path="/mypage" element={<MyPage />} />
+              <Route path="/map" element={<Map />} />
             </Routes>
           </Main>
         </Layout>
@@ -41,7 +43,8 @@ function Layout({ children }) {
   const location = useLocation();
 
   // /login 경로에서 Header와 Footer 컴포넌트 제외
-  const isLoginRoute = location.pathname === "/login" || location.pathname === "/";
+  const isLoginRoute =
+    location.pathname === "/login" || location.pathname === "/";
 
   return (
     <>
@@ -51,6 +54,5 @@ function Layout({ children }) {
     </>
   );
 }
-
 
 export default App;
